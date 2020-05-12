@@ -1,1 +1,48 @@
 // Navigation Styles here
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+
+    a {
+        text-decoration: none;
+        padding: 4%;
+        font-size: 1.5rem;
+        color: black;
+    }
+}
+
+.topBar {
+    border-bottom: 2px dashed @navigation-border;
+    display: flex;
+    padding: 1% 0;
+
+    h1 {
+        max-width: 100px;
+        width: 100%;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+}
+
+@media @mobile {
+    .topBar {
+        flex-direction: column;
+
+        h1 {
+            max-width: 150px;
+            padding-top: 2%;
+        }
+    }
+
+    .navigation {
+        justify-content: space-evenly;
+        max-width: 500px;
+
+        a {
+            padding: 2% 4%;
+        }
+    }
+}
